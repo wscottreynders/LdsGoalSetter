@@ -17,13 +17,36 @@ Explain what files are needed to run and which file to run. It is also helpful t
 [Image Caption](image.png)
 
 ## Code Example
-Show a small snippet of the code you are proud of and why.
+This code snippet sows how the user can enter input for one tool and then exit to the menu to select an additional tool.
 ```
-Insert Code Here
+public static void main(String[] args) {
+		int exit = 0;
+				while (exit < 1){
+				Scanner input = new Scanner(System.in);
+				int user = 0;
+				user = prompt();
+				
+					while (user != 1 && user != 2 && user !=3){
+						System.out.println("Not a valid input");
+						 user = prompt();
+					}
+					
+				calculate(user);
+				System.out.print("Enter '1' to exit. Enter '0' to input new data: ");
+				exit = input.nextInt();
+				}
+	}
 ```
 
 ## Tests
-Describe and show how to run the tests with code examples. State that you are using JUnit4 to test.
+I used JUnit4 to test the value returning methods in the program.
+```
+@Test
+	public void testcalculatepagesperday() {
+		assertEquals(finalTool.calculatePagesPerDay(10, 20, 2), 5, .0001);
+		assertEquals(finalTool.calculatePagesPerDay(10, 50, 5), 8, .0001);
+		assertEquals(finalTool.calculatePagesPerDay(15, 100, 8), 10.625, .0001);
+```
 
 ## Contributors
-This prokect was completely completed by me.
+This prokect was completely created by me.
