@@ -8,7 +8,7 @@ My desire to create this code came from my desire to set and achieve realistic g
 
 ## How to Run
 You will need the ability to run Java programs in a console.
-![](img src="LdsTool pic.png" /)
+![](LdsTool%20pic.png)
 
 ## Code Example
 This code snippet shows how the user can enter input for one tool and then exit to the menu to select an additional tool.
