@@ -80,103 +80,105 @@ public class finalTool {
 			
 			public static void calculate(int user) {
 				Scanner input = new Scanner(System.in);
-				double[][] scriptures = new double[6][1];
-				double[][] templeWork = new double[9][1];
-				double[][] familyHistory = new double[9][1];
+				double[] scriptures = new double[6];
+				double[] templeWork = new double[9];
+				double[] familyHistory = new double[9];
 				
 				if (user == 1) {
 					System.out.print("Enter how many days you woud like the task completed in: ");
-						scriptures[0][0] = input.nextDouble();
+						scriptures[0] = input.nextDouble();
 					System.out.print("Enter the first page number of your reading: ");
-						scriptures[1][0] = input.nextDouble();
+						scriptures[1] = input.nextDouble();
 					System.out.print("Enter the last page number of your reading: ");
-						scriptures[2][0] = input.nextDouble();
-						scriptures[3][0] = calculatePagesPerDay(scriptures[1][0], scriptures[2][0], scriptures[0][0]);
-						scriptures[4][0] = calculatePagesPerWeek(scriptures[1][0], scriptures[2][0], scriptures[0][0]);
-						scriptures[5][0] = calculateTotalPages(scriptures[1][0], scriptures[2][0]);
+						scriptures[2] = input.nextDouble();
+						scriptures[3] = calculatePagesPerDay(scriptures[1], scriptures[2], scriptures[0]);
+						scriptures[4] = calculatePagesPerWeek(scriptures[1], scriptures[2], scriptures[0]);
+						scriptures[5] = calculateTotalPages(scriptures[1], scriptures[2]);
 						
 					System.out.println("------------------------------------------------------------------");
 						
 					System.out.println("Scritpures");
 					System.out.println(" ");
-					System.out.println("Total days: " + scriptures[0][0]);
-					System.out.println("Total pages: " + scriptures[5][0]);
+					System.out.println("Total days: " + scriptures[0]);
+					System.out.println("Total pages: " + scriptures[5]);
 					System.out.print("Pages per day:");
-					System.out.printf("%5.2f\n", scriptures[3][0]);
+					System.out.printf("%5.2f\n", scriptures[3]);
 					System.out.print("Pages per week:");
-					System.out.printf("%5.2f\n", scriptures[4][0]);
+					System.out.printf("%5.2f\n", scriptures[4]);
 					
 				}
 				
 				else if (user == 2) {
 					System.out.print("Enter how many days you would like the task completed in: ");
-						templeWork[0][0] = input.nextDouble();
+						templeWork[0] = input.nextDouble();
 					System.out.print("Enter the number of baptisms and conformations: ");
-						templeWork[1][0] = input.nextDouble();
+						templeWork[1] = input.nextDouble();
 					System.out.print("Enter the number of Initiatories: ");
-						templeWork[2][0] = input.nextDouble();
+						templeWork[2] = input.nextDouble();
 					System.out.print("Enter the number of Endowments: ");
-						templeWork[3][0] = input.nextDouble();
+						templeWork[3] = input.nextDouble();
 					System.out.print("Enter the number of Sealings: ");
-						templeWork[4][0] = input.nextDouble();
-						templeWork[5][0] = calculateOrdinancesPerWeek(templeWork[1][0], templeWork[0][0]);
-						templeWork[5][0] = calculateOrdinancesPerWeek(templeWork[1][0], templeWork[0][0]);
-						templeWork[6][0] = calculateOrdinancesPerWeek(templeWork[2][0], templeWork[0][0]);
-						templeWork[7][0] = calculateOrdinancesPerWeek(templeWork[3][0], templeWork[0][0]);
-						templeWork[8][0] = calculateOrdinancesPerWeek(templeWork[4][0], templeWork[0][0]);
+						templeWork[4] = input.nextDouble();
+						templeWork[5] = calculateOrdinancesPerWeek(templeWork[1], templeWork[0]);
+						templeWork[6] = calculateOrdinancesPerWeek(templeWork[2], templeWork[0]);
+						templeWork[7] = calculateOrdinancesPerWeek(templeWork[3], templeWork[0]);
+						templeWork[8] = calculateOrdinancesPerWeek(templeWork[4], templeWork[0]);
 						
 					System.out.println("------------------------------------------------------------------");
 					
 					System.out.println("Temple Work");
 					System.out.println(" ");
-					System.out.println("Total days: " + templeWork[0][0]);
-					System.out.println("Baptism/Conformations Total: " + templeWork[1][0]);
-					System.out.println("Initiatories Total: " + templeWork[2][0]);
-					System.out.println("Endowment Total: " + templeWork[3][0]);
-					System.out.println("Sealing Total: " + templeWork[4][0]);
+					System.out.println("Total days: " + templeWork[0]);
+					System.out.println("Baptism/Conformations Total: " + templeWork[1]);
+					System.out.println("Initiatories Total: " + templeWork[2]);
+					System.out.println("Endowment Total: " + templeWork[3]);
+					System.out.println("Sealing Total: " + templeWork[4]);
+					System.out.println(" ");
 					System.out.print("Baptism/Conformations Per Week: ");
-					System.out.printf("%5.2f\n", templeWork[5][0]);
+					System.out.printf("%5.2f\n", templeWork[5]);
 					System.out.print("Initiatories Per Week: ");
-					System.out.printf("%5.2f\n", templeWork[6][0]);
+					System.out.printf("%5.2f\n", templeWork[6]);
 					System.out.print("Endowments Per Week: ");
-					System.out.printf("%5.2f\n", templeWork[7][0]);
+					System.out.printf("%5.2f\n", templeWork[7]);
 					System.out.print("Sealings Per Week: ");
-					System.out.printf("%5.2f\n", templeWork[8][0]);	
+					System.out.printf("%5.2f\n", templeWork[8]);	
 
 				}
 				
 				else if (user == 3) {
 					System.out.print("Enter how many days would you like to complete the task in: ");
-						familyHistory[0][0] = input.nextDouble();
+						familyHistory[0] = input.nextDouble();
 					System.out.print("Enter the number of baptisms and conformations: ");
-						familyHistory[1][0] = input.nextDouble();
+						familyHistory[1] = input.nextDouble();
 					System.out.print("Enter the number of Initiatories: ");
-						familyHistory[2][0] = input.nextDouble();
+						familyHistory[2] = input.nextDouble();
 					System.out.print("Enter the number of Endowments: ");
-						familyHistory[3][0] = input.nextDouble();
+						familyHistory[3] = input.nextDouble();
 					System.out.print("Enter the number of sealings: ");
-						familyHistory[4][0] = input.nextDouble();
-						familyHistory[5][0] = calculateOrdinancesPerWeek(familyHistory[1][0], familyHistory[0][0]);
-						familyHistory[6][0] = calculateOrdinancesPerWeek(familyHistory[2][0], familyHistory[0][0]);
-						familyHistory[7][0] = calculateOrdinancesPerWeek(familyHistory[3][0], familyHistory[0][0]);
-						familyHistory[8][0] = calculateOrdinancesPerWeek(familyHistory[4][0], familyHistory[0][0]);
+						familyHistory[4] = input.nextDouble();
+						familyHistory[5] = calculateOrdinancesPerWeek(familyHistory[1], familyHistory[0]);
+						familyHistory[6] = calculateOrdinancesPerWeek(familyHistory[2], familyHistory[0]);
+						familyHistory[7] = calculateOrdinancesPerWeek(familyHistory[3], familyHistory[0]);
+						familyHistory[8] = calculateOrdinancesPerWeek(familyHistory[4], familyHistory[0]);
+						
 					System.out.println("------------------------------------------------------------------");
 						
 					System.out.println("Family History");
 					System.out.println(" ");
-					System.out.println("Total days: " + familyHistory[0][0]);
-					System.out.println("Baptisms/Conformations Total: " + familyHistory[1][0]);
-					System.out.println("Initiatories Total: " + familyHistory[2][0]);
-					System.out.println("Endowments Total: " + familyHistory[3][0]);
-					System.out.println("Sealings Total: " + familyHistory[4][0]);
+					System.out.println("Total days: " + familyHistory[0]);
+					System.out.println("Baptisms/Conformations Total: " + familyHistory[1]);
+					System.out.println("Initiatories Total: " + familyHistory[2]);
+					System.out.println("Endowments Total: " + familyHistory[3]);
+					System.out.println("Sealings Total: " + familyHistory[4]);
+					System.out.println(" ");
 					System.out.print("Baptisms/Conformations per Week: ");
-					System.out.printf("%5.2f\n", familyHistory[5][0]);
+					System.out.printf("%5.2f\n", familyHistory[5]);
 					System.out.print("Initiatories per Week: ");
-					System.out.printf("%5.2f\n", familyHistory[6][0]);
+					System.out.printf("%5.2f\n", familyHistory[6]);
 					System.out.print("Endowments per Week: ");
-					System.out.printf("%5.2f\n", familyHistory[7][0]);
+					System.out.printf("%5.2f\n", familyHistory[7]);
 					System.out.print("Sealings per Week: ");
-					System.out.printf("%5.2f\n", familyHistory[8][0]);
+					System.out.printf("%5.2f\n", familyHistory[8]);
 
 				}
 				
@@ -268,3 +270,4 @@ public class finalTool {
 			}
 
 }
+
