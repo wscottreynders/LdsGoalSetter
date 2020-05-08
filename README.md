@@ -7,8 +7,8 @@ The goal of this project was first and for most to practice skills for my coding
 My desire to create this code came from my desire to set and achieve realistic goals. This is something that I have learned as a member of the LDS faith. After some brief searching, I found LDS apps that helped members to set goals, but not to show what efforts would be needed on a daily and weekly basis to achieve that goal. So, I decided to make the beginnings of a simple tool that would allow members to set goals for scripture reading, family history, and temple work. The code has users input the quantity and the time and then relates what amount of each goal must be achieved on a daily and weekly basis.
 
 ## How to Run
-You will need Java 
-[Image Caption](image.png)
+You will need the ability to run Java programs in a console.
+[Image Caption](LdsToolpic.png)
 
 ## Code Example
 This code snippet shows how the user can enter input for one tool and then exit to the menu to select an additional tool.
