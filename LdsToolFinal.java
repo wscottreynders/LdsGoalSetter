@@ -63,8 +63,8 @@ public class finalTool {
 				System.out.println("");
 				System.out.println("What would you like to calculate?");
 				System.out.println("1) Scripture Sutdy");
-				System.out.println("2) Family History");
-				System.out.println("3) Temple Work");
+				System.out.println("2) Temple Work");
+				System.out.println("3) Family History");
 				System.out.print("> ");
 				user = input.nextInt();
 				
